@@ -74,7 +74,7 @@ public class ApiController {
 
                 fullData.put("ten", v.text());
 
-                fullData.put("bookLink", v.select("a").attr("href").replace("https://truyenfull.vn", "http://192.168.1.239:8085/api") + "1");
+                fullData.put("bookLink", v.select("a").attr("href").replace("https://truyenfull.vn", "https://tse-sus.herokuapp.com/api") + "1");
 
                 arrayList.add(fullData);
 
@@ -98,7 +98,7 @@ public class ApiController {
             fullData.put("date", v.select("div.col-time").text());
             fullData.put("chuong", v.select("div.text-info").text());
             fullData.put("theloai",v.select("div.col-cat").text());
-            fullData.put("bookLink", v.select("a").attr("href").replace("https://truyenfull.vn", "http://192.168.1.239:8085/api") + "1");
+            fullData.put("bookLink", v.select("a").attr("href").replace("https://truyenfull.vn", "https://tse-sus.herokuapp.com/api") + "1");
 
             arrayList.add(fullData);
         }
@@ -125,7 +125,7 @@ public class ApiController {
 
                 fullData.put("ten", v.select("a>div>h3").text());
 
-                fullData.put("bookLink", v.select("a").attr("href").replace("https://truyenfull.vn", "http://192.168.1.239:8085/api") + "1");
+                fullData.put("bookLink", v.select("a").attr("href").replace("https://truyenfull.vn", "https://tse-sus.herokuapp.com/api") + "1");
 
                 arrayList.add(fullData);
 
