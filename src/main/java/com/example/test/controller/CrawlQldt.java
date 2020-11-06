@@ -27,8 +27,9 @@ public class CrawlQldt {
 
 
 
-    @GetMapping("/login")
-    public ResponseEntity<?> saveCookies(
+    @PostMapping("/login")
+    public ResponseEntity<?> saveCookies(@RequestParam(value = "user") String username,
+                                         @RequestParam(value = "pass") String password
 
     ) throws IOException {
 
@@ -46,8 +47,8 @@ public class CrawlQldt {
 //        System.out.println(viewState.attr("value"));
         Connection.Response response = Jsoup.connect(url1)
                 .method(Connection.Method.POST)
-                .data("ctl00$ContentPlaceHolder1$ctl00$ucDangNhap$txtTaiKhoa", "B19DCPT189")
-                .data("ctl00$ContentPlaceHolder1$ctl00$ucDangNhap$txtMatKhau", "longsangBn1")
+                .data("ctl00$ContentPlaceHolder1$ctl00$ucDangNhap$txtTaiKhoa", username)
+                .data("ctl00$ContentPlaceHolder1$ctl00$ucDangNhap$txtMatKhau", password)
                 .data("ctl00$ContentPlaceHolder1$ctl00$ucDangNhap$btnDangNhap", "Đăng Nhập")
                 .data("__EVENTTARGET", "")
                 .data("__EVENTARGUMENT", "")
